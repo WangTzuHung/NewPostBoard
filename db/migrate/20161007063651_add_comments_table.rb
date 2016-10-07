@@ -1,8 +1,8 @@
-class AddPostsTable < ActiveRecord::Migration
+class AddCommentsTable < ActiveRecord::Migration
   def change
-  	create_table :posts do |t|
-      t.string :title
+  	  create_table :comments do |t|
       t.text :content
+      t.integer :post_id
       t.integer :user_id
  
       t.timestamps null: false
