@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   resources :posts do 
     resources :comments 
   end
-
+  root 'posts#index'
   # Example resource route with options:
   #   resources :products do
   #     member do
