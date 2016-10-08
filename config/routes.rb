@@ -17,7 +17,19 @@ Rails.application.routes.draw do
   resources :posts do 
     resources :comments 
   end
+  
   root 'posts#index'
+
+  get '/register', to: 'users#new'
+  get '/login', to: 'sessions#new'
+  post '/login', to: 'sessions#create'
+  get '/logout', to: 'sessions#destroy'
+
+  resources :users, only: [:new, :create, :edit, :update, :show]
+  
+  resources :posts do 
+    resources :comments 
+  end
   # Example resource route with options:
   #   resources :products do
   #     member do
