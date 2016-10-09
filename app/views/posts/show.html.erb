@@ -40,6 +40,7 @@
 <% end %>
 
   <% if logged_in? %>
+  <div class="col-md-6 well">
     <h4>Leave a comment:</h4>
     <%= form_for [@post, @comment] do |f| %>
       <div class="row">
@@ -48,6 +49,7 @@
           <%= f.submit 'Create Comment', class: 'btn btn-primary' %>
         </div>
       </div>
+  </div>
       <br>
   <% end %>
 
