@@ -10,6 +10,7 @@
     <small>posted by </small><%= @post.user.name %>
   </div>
 </div>
+<div class="col-md-8 well">
 <h4>All Comments:</h4>
 <% @post.comments.each do |comment|%>
   <div class="row">
@@ -57,4 +58,5 @@
 <hr>
 <div class="row">
   <%= link_to 'go back to all posts', posts_path %>
+</div>
 </div>
